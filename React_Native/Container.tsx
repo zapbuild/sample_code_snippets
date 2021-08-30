@@ -15,14 +15,15 @@ import { IconTypes } from '../assets/Images';
 import Config from '../utils/Config';
 import HeaderComponent from './reuse/HeaderComponent';
 
+// Component props type
 type Props = {
     enableScroll?: boolean;
     children: ReactNode;
     style?: ViewStyle;
     hasTextInput?: boolean;
     headerTitle: string | undefined;
-    isHomeScreen?: boolean;
-    safeAreaView?: boolean;
+    hasExtendedHeader?: boolean;
+    hasBottomSafeArea?: boolean;
     leftIcon?: IconTypes;
     rightIcon?: IconTypes;
     onLeftPress?: () => void;
@@ -30,7 +31,7 @@ type Props = {
     textStyle?: TextStyle
 };
 
-/** A Wrapper Component with BoilerPlate code for all Screens */
+/** A Boilerplate Container Component for App Screens*/
 export function Container(props: Props) {
 
     const {
@@ -39,13 +40,13 @@ export function Container(props: Props) {
         style,
         hasTextInput,
         headerTitle,
-        safeAreaView,
+        hasBottomSafeArea,
         leftIcon,
         rightIcon,
         onLeftPress,
         onRightPress,
         textStyle,
-        isHomeScreen = false
+        hasExtendedHeader
     } = props;
 
     const containerStyle: ViewStyle = {
@@ -71,7 +72,7 @@ export function Container(props: Props) {
             <HeaderComponent
                 title={headerTitle}
                 textStyle={textStyle}
-                isHomeScreen={isHomeScreen}
+                hasExtendedHeader={hasExtendedHeader}
                 leftIcon={leftIcon}
                 rightIcon={rightIcon}
                 onLeftPress={onLeftPress}
@@ -98,7 +99,7 @@ export function Container(props: Props) {
                     </ScrollView>
                 )}
             </View>
-            {safeAreaView && <SafeAreaView style={{ backgroundColor: 'white' }} />}
+            {hasBottomSafeArea && <SafeAreaView style={{ backgroundColor: 'white' }} />}
         </>
     );
 }
@@ -114,4 +115,3 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-end',
     }
 });
-
