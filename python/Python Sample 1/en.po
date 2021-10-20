@@ -1,0 +1,22 @@
+msgid 	'LEAVE_APPROVE_ERR'
+msgstr 'Sorry can\'t approve the leaves'
+
+msgid 	'LEAVE_APPROVE_ADMIN_PERMISSON_ERR'
+msgstr 'Only admin/supervisors can approve the leave'
+
+msgid 	'LEAVE_DECLINE_ERR'
+msgstr 'Sorry can\'t declined the leaves'
+
+msgid 	'LEAVE_CANCEL_ADMIN_PERMISSON_ERR'
+msgstr 'Only admin/supervisors and applicant can cancel the leave'
+
+msgid 'WORNG_CURRENT_STATUS_ON_CALNCEL'
+msgstr 'Wrong status selection for canceling a leave'
+
+msgid 'END_DATE_SHOULD_GREATER_THAN_START'
+msgstr 'End date should always be greater than start date'
+
+msgid 'SELECTED_LEAVES_ARE_ALREADY_APPLIED'
+msgstr 'The leaves for dates %s are already applied'
+
+
